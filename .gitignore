@@ -9,6 +9,8 @@ lerna-debug.log*
 
 /node_modules
 dist
+!.github/actions/deploy-s3-javascript/dist/
+!.github/actions/deploy-s3-javascript/dist/**
 dist-ssr
 *.local
 
