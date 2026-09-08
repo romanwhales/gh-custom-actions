@@ -14,10 +14,16 @@ function run() {
     required: false,
   });
 
+  console.log(`distFolder: ${distFolder}`);
+  console.log(`bucket: ${bucket}`);
+  console.log(`bucketRegion: ${bucketRegion}`);
+
   // 2. Upload Files
   const s3Uri = `s3://${bucket}`;
+  console.log(`s3 uri ${s3Uri}`);
   exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion}`);
 
+  core.notice("Is this executed ?");
   core.notice("Hello from my custom Javascript Action!");
 }
 
