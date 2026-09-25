@@ -76,7 +76,6 @@ jobs:
         uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502
         with:
           role-to-assume: arn:aws:iam::162805777419:role/GithubDemo1
-          role-session-name: samplerolesession
           aws-region: us-east-2
       - name: Deploy site
         id: deploy
