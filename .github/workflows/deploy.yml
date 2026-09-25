@@ -73,10 +73,11 @@ jobs:
       - name: Output contents
         run: ls
       - name: Get AWS permissions
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6.3.0
         with:
           role-to-assume: arn:aws:iam::162805777419:role/GithubDemo1
           aws-region: us-east-2
+          role-session-name: MySessionName
       - name: Deploy site
         id: deploy
         uses: ./.github/actions/deploy-s3-docker
